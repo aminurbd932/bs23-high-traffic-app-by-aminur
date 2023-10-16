@@ -25,7 +25,7 @@ function storePaymentInformation($user_id, $amount, $firstApiResponse, $transact
 
     $conn = connectToDatabase();
 
-    $sql = "INSERT INTO MyGuests (transactionId, user_id, amount)
+    $sql = "INSERT INTO transactions (transactionId, user_id, amount)
     VALUES ($user_id, $amount,$transactionId)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
